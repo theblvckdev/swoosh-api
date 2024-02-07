@@ -6,3 +6,6 @@
 06/02/2024, 23:55:07	e2d3fb8a-01a7-4bf4-9f01-7563709cbfe1	POST	undefined	/api/auth/signup
 07/02/2024, 00:00:01	5d7d8675-3eb8-418a-89d7-a72e002de782	POST	undefined	/api/auth/signup
 07/02/2024, 00:01:07	a8fa3588-3af9-406f-b1a8-640fb8aea97c	POST	undefined	/api/auth/signup
+07/02/2024, 00:21:20	c5d7123b-4dad-4e4b-92cb-d19596b029c9	POST	undefined	/auth/signup
+07/02/2024, 00:21:26	83333754-d7c0-4330-8b7c-df5098445572	POST	undefined	/api/auth/signup
+07/02/2024, 00:28:54	47e0dc1a-017f-4858-affb-c840726cfa1b	POST	undefined	/api/auth/signup
