@@ -23,7 +23,7 @@ const handleNewUser = async (req, res) => {
       const duplicate = data.length;
       if (duplicate) {
         return res.status(409).json({
-          message: `Opps!, Account with username: ${username} and email: ${email} already taken`,
+          message: `Opps!, Account already taken`,
         });
       }
 
@@ -33,11 +33,11 @@ const handleNewUser = async (req, res) => {
 
       // save new user details in db
       const sqlInsertQuery =
-        'INSERT INTO users (username, firstName, lastName, email, password) VALUES (?, ?, ?, ?, ?)';
+        'INSERT INTO users (username, firstName, lastName, email, password, verificationToken) VALUES (?, ?, ?, ?, ?, ?)';
 
       dbConnect.query(
         sqlInsertQuery,
-        [username, firstName, lastName, email, hashedPassword],
+        [username, firstName, lastName, email, hashedPassword, emailToken],
         (err, data) => {
           if (err) return res.status(500).json({ message: err.message });
 
