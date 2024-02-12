@@ -25,13 +25,6 @@ const handleLogin = async (req, res) => {
         return res.status(404).json({ message: `Account not found` });
       }
 
-      if (data[0].status === 0) {
-        return res.status(401).json({
-          message:
-            'Account not verified, check your email and verify your account!',
-        });
-      }
-
       const user = data[0];
 
       bcrypt.compare(req.body.password, user.password, (err, match) => {
@@ -41,6 +34,13 @@ const handleLogin = async (req, res) => {
           return res
             .status(401)
             .json({ message: 'Invalid email address or password' });
+        }
+
+        if (data[0].status === 0) {
+          return res.status(401).json({
+            message:
+              'Account not verified, check your email and verify your account!',
+          });
         }
 
         // create JWTs
