@@ -1,7 +1,7 @@
 const dbConnect = require('../../config/dbConnect');
 const bcrypt = require('bcrypt');
 const sendEmail = require('../../mail/userEmailVerification');
-const { randomBytes, createHash } = require('crypto');
+const { randomBytes } = require('crypto');
 
 const handleNewUser = async (req, res) => {
   const { username, email, firstName, lastName, password } = req.body;
@@ -12,7 +12,7 @@ const handleNewUser = async (req, res) => {
   const sqlSelectAllQuery =
     'SELECT * FROM users WHERE username = ? OR email = ?';
 
-  const emailToken = randomBytes(7).toString('base64').replaceAll('/', 'B');
+  const emailToken = randomBytes(64).toString('hex');
   // const hashedEmailToken = createHash('sha256').update(emailToken).digest('hex');
 
   try {
