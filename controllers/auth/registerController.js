@@ -27,6 +27,16 @@ const handleNewUser = async (req, res) => {
         });
       }
 
+      // password security
+      const passwordRegex = /^(?=.*[\W_]).{8,}$/;
+
+      if (!passwordRegex.test(password)) {
+        return res.status(401).json({
+          message:
+            'Password must be at least 8 characters long and have a symbol.',
+        });
+      }
+
       // hash password
       const salt = bcrypt.genSaltSync(10);
       const hashedPassword = bcrypt.hashSync(password, salt);
