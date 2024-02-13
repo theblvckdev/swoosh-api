@@ -21,6 +21,7 @@ app.use(errorHandler);
 app.use('/api/auth/', require('./routes/auth/registerRoute'));
 app.use('/api/auth/', require('./routes/auth/signinRoute'));
 app.use('/api/auth/', require('./routes/auth/verifyEmailRoute'));
+app.use('/api/auth/', require('./routes/auth/updateUserDetailsRoute'));
 
 // sends a JSON object with an error message if api route not fond
 app.all('*', (req, res) => {

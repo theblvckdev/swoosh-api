@@ -116,3 +116,8 @@
 12/02/2024, 19:37:00	53c9350c-e2df-4ab1-921d-2b308ce1f753	POST	undefined	/api/auth/signin
 12/02/2024, 19:37:05	980c1d20-3bd1-4aa9-9239-d09eebbca526	GET	undefined	/api/auth/verify-email/0dea2ebeed833ea2bdc03f91d598626a30ea45d4f0120be1f457169eca35a239624ad61ce1612f58044d0b6d86d330b7813c7f72c27d333cb778da4e1b01c89b
 12/02/2024, 19:37:09	22c6ab67-2b94-446e-aafc-27fe0e25a96b	POST	undefined	/api/auth/signin
+13/02/2024, 14:18:30	9f58fd0c-7b98-49ce-8415-d204cb94ee3f	PUT	undefined	/api/auth/update_user_details/51
+13/02/2024, 14:21:35	0338ed33-85b2-4d9b-b641-cd5611a456fa	PUT	undefined	/api/auth/update_user_details/51
+13/02/2024, 14:22:22	be12ed37-0177-43a5-9545-7e2f299692c3	PUT	undefined	/api/auth/update_user_details/51
+13/02/2024, 14:22:50	3a3066c2-13b2-4891-b02e-d4c972bf49f8	PUT	undefined	/api/auth/update_user_details/51
+13/02/2024, 14:23:24	d1588694-19cd-4fe1-bb78-ab470162838a	PUT	undefined	/api/auth/update_user_details/51
